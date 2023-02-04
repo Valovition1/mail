@@ -13,7 +13,6 @@ require 'PHPMailer\src\Exception';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-try {
     //Server settings                     //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
@@ -28,10 +27,8 @@ try {
     $mail->addAddress($_POST['email']);     //Add a recipient
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Doma Shop';
-    $mail->Body    = 'This is the verification code';
+    $mail->isHTML(true); 
+    $key = mt_rand(99999,999999);
+    $mail->Subject = 'Doma Shop code'.$key;
+    $mail->Body    = 'This is the verification code' .$key;
     $mail->send();
-} catch (Exception $e) {
-    //error
-}
