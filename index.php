@@ -11,6 +11,7 @@
 
     <form action="" method ="post">
     
+    <input type="text"><br>
     <input type="text">
     
 
