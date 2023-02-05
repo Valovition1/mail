@@ -8,5 +8,15 @@
 </head>
 <body>
     
+
+    <form action="" method ="post">
+    
+    <input type="text">
+    
+
+    </form>
+
+    
+
 </body>
 </html>
